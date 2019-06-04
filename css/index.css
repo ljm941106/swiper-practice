@@ -6,7 +6,7 @@
 }
 
 .nav {
-  width: 690rpx;
+  width: 6.9rem;
   height: .6rem;
   margin: .4rem auto .4rem;
   display: flex;
@@ -21,6 +21,7 @@
 }
 
 .nav-item.active {
+  position: relative;
   color: #E4CCA0;
 }
 
@@ -35,47 +36,46 @@
   height: .02rem;
 }
 
-.swiper-slide {
+.index .swiper-slide {
   width: 5.2rem;
 }
 
-.swiper-slide .img {}
 
-.swiper-slide h3 {
+.index .swiper-slide h3 {
   margin-top: .12rem;
   color: #FFFFFF;
   line-height: .4rem;
 }
 
-.swiper-slide .more {
+.index .swiper-slide .more {
   height: .5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.swiper-slide .more .num {
+.index .swiper-slide .more .num {
   color: #979aad;
   font-size: .24rem;
 }
 
-.swiper-slide .more .price del {
+.index .swiper-slide .more .price del {
   font-size: .2rem;
 }
 
-.swiper-slide .more .price span {
+.index .swiper-slide .more .price span {
   color: #E4CCA0;
   font-weight: bold;
 }
 
-.swiper-slide .button-box {
+.button-box {
   height: .6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.swiper-slide .button {
+.button {
   width: 2.4rem;
   height: .5rem;
   border: .01rem solid #E4CCA0;
@@ -87,7 +87,320 @@
   font-size: .26rem;
 }
 
-.swiper-slide .button-a {
+.button-a {
   background: #E4CCA0;
   color: #FFFFFF;
+}
+
+.code-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.code-item {
+  margin-top: .4rem;
+  width: 6.7rem;
+  display: flex;
+  padding-bottom: .4rem;
+  border-bottom: .01rem solid #4d4f44;
+}
+
+.code-item:last-of-type {
+  border-bottom: none;
+}
+
+.code-item:first-of-type {
+  margin-top: 0;
+}
+
+.code-item .img {
+  width: 1.66rem;
+  height: 2.63rem;
+  margin-right: .4rem;
+}
+
+.code-item .intro {
+  width: calc(100% - 2.1rem);
+  color: #FFFFFF
+}
+
+.code-item .intro p {
+  line-height: 0.6rem;
+}
+
+.button-box {
+  height: .8rem;
+  align-items: flex-end
+}
+
+.code-item .button {
+  width: 2rem;
+  height: .6rem;
+  border-radius: .1rem
+}
+
+.code-con>.button {
+  margin: .4rem auto;
+}
+
+.description {
+  margin: 0 auto;
+  width: 6.5rem;
+}
+
+.description p {
+  text-align: justify;
+  color: #E4CCA0;
+  font-size: .32rem;
+  line-height: .5rem;
+  letter-spacing: .05rem;
+  margin-bottom: .3rem
+}
+
+.modal {
+  position: fixed;
+  z-index: 9;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .8);
+}
+
+.modal-buy {
+  background: #272727;
+  width: 100vw;
+  height: 100vh;
+  padding: .8rem .4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+.modal-buy h2 {
+  font-size: .32rem
+}
+
+.modal-buy .sub {
+  height: .8rem;
+  font-size: .22rem;
+  display: flex;
+  align-items: center;
+}
+
+.modal-buy .sub img {
+  width: .36rem;
+  margin-right: .12rem
+}
+
+.modal-buy .buy-form {
+  margin-top: .4rem;
+}
+
+.modal-buy .buy-form label {
+  width: 6.5rem;
+  height: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: .01rem solid #4d4f44;
+}
+
+.modal-buy .buy-form label .flex-left {
+  display: flex;
+  align-items: center;
+}
+
+.modal-buy .buy-form label input {
+  width: .4rem;
+  height: .4rem;
+  display: block;
+  background: url('../img/icon-radio.png') center / cover;
+  margin-right: .2rem;
+}
+
+.modal-buy .buy-form label input:checked {
+  background-image: url('../img/icon-radio-checked.png')
+}
+
+.modal-buy .buy-form label span {
+  font-size: .3rem;
+}
+
+.modal-buy .buy-form .flex-right {
+  color: #E4CCA0;
+  font-weight: bold;
+}
+
+.modal-buy .form-more {
+  margin-top: .4rem;
+  height: 1rem;
+  width: 6.5rem;
+  border: .01rem solid #e2e2e2;
+  border-radius: .04rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: .6rem;
+}
+
+.modal-buy .form-more:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: .01rem;
+  height: .6rem;
+  background: #9d9d9d;
+  left: 50%;
+  top: .2rem;
+  transform: translate(-50%, 0)
+}
+
+.modal-buy .form-more input {
+  width: 50%;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.modal-buy .form-more input::-webkit-input-placeholder {
+  color: #FFFFFF;
+}
+
+.modal-buy .form-more .price {
+  width: 50%;
+  color: #E4CCA0;
+  text-align: center;
+}
+
+.modal-buy .button {
+  width: 6.5rem;
+  height: 1rem;
+}
+
+.modal-buy .button-none {
+  border: none;
+}
+
+.modal-des {
+  width: 6.5rem;
+  background: #212121;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding-bottom: .6rem;
+}
+
+.modal-des h2 {
+  margin-bottom: .4rem;
+  font-size: .36rem;
+  line-height: 1rem;
+  text-align: center;
+  color: #FFFFFF;
+  border-bottom: .01rem solid #E4CCA0;
+}
+
+.modal-des p {
+  color: #FFFFFF;
+  margin-top: .2rem;
+  padding: 0 .4rem;
+}
+
+.modal-des .button {
+  margin: .6rem auto 0;
+  height: .8rem;
+  width: 5.7rem;
+}
+
+.preview {
+  width: 100vw;
+  height: 100vh;
+}
+
+.preview .swiper-slide {
+  width: 100vw;
+  height: 100vh;
+}
+
+.preview .swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.preview .swiper-pagination {
+  position: fixed;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%)
+}
+
+.preview .swiper-pagination-bullet {
+  /* width: 10px;
+  height: 10px; */
+  opacity: 1;
+  border: #E4CCA0 solid .01rem;
+  margin: 0 .05rem;
+  background: transparent;
+}
+
+.preview .swiper-pagination-bullet-active {
+  background: #E4CCA0;
+}
+
+.preview .button-box {
+  width: 6.3rem;
+  position: fixed;
+  left: 50%;
+  bottom: .4rem;
+  transform: translateX(-50%);
+  z-index: 99;
+  justify-content: space-between;
+}
+
+.preview .button-box .button {
+  height: .65rem;
+  border-radius: .1rem;
+  width: 2.9rem;
+}
+
+.preview .button-box .button-a {
+  background: #e3cca2
+}
+
+.preview .modal {
+  background: transparent;
+}
+
+.preview .modal-use {
+  background: rgba(0, 0, 0, .6);
+  width: 5rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: .05rem;
+  padding: 0 .4rem .4rem;
+}
+
+.preview .modal-use h2 {
+  font-size: .32rem;
+  color: #FFFFFF;
+  line-height: 1rem;
+  text-align: center;
+}
+
+.preview .modal-use .input input {
+  width: 100%;
+  background: #FFFFFF;
+  height: .7rem;
+  border-radius: .05rem;
+  padding: 0 .2rem;
+}
+
+.preview .modal-use .button {
+  width: 100%;
+  height: .7rem;
+  margin-top: .4rem;
 }

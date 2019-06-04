@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+  </head>
+
+  <body>
+    <div class="preview">
+      <div class=" swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./img/img1.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/img1.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/img1.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/img1.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="button-box">
+        <div class="button">回到首页</div>
+        <div class="button button-a">使用阅读码</div>
+      </div>
+      <div class="modal none modal-use-con">
+        <div class="modal-use">
+          <h2>使用阅读码</h2>
+          <div class="input">
+            <input type="text" placeholder="请输入阅读码">
+          </div>
+          <div class="button button-a">确认</div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/rem.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script>
+      var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: true,
+        slidesPerView: 'auto',
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      })
+      $('.button-box .button-a').click(function () {
+        $('.modal-use-con').show()
+      })
+      $('.modal-use-con').click(function (e) {
+        if (e.target.className == 'modal none modal-use-con') {
+          $('.modal-use-con').hide()
+        }
+      })
+
+    </script>
+  </body>
+
+</html>
