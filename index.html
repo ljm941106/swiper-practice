@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title></title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+  <link rel="stylesheet" href="./css/index.css"> </head>
+
+<body>
+  <div class="index">
+    <div class="nav">
+      <div class="nav-item">杂志</div>
+      <div class="nav-item">我的阅读码</div>
+      <div class="nav-item">使用教程</div>
+    </div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="img"> <img src="./img/img1.jpg" alt=""> </div>
+          <h3>直击桃心的团队</h3>
+          <div class="more">
+            <div class="num">销量：3718</div>
+            <div class="price"><del>￥12.00</del><span>￥6.00</span></div>
+          </div>
+          <div class="button-box">
+            <div class="button">开始阅读</div>
+            <div class="button button-a">购买阅读码</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="img"> <img src="./img/img1.jpg" alt=""> </div>
+          <h3>直击桃心的团队</h3>
+          <div class="more">
+            <div class="num">销量：3718</div>
+            <div class="price"><del>￥12.00</del><span>￥6.00</span></div>
+          </div>
+          <div class="button-box">
+            <div class="button">开始阅读</div>
+            <div class="button button-a">购买阅读码</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="img"> <img src="./img/img1.jpg" alt=""> </div>
+          <h3>直击桃心的团队</h3>
+          <div class="more">
+            <div class="num">销量：3718</div>
+            <div class="price"><del>￥12.00</del><span>￥6.00</span></div>
+          </div>
+          <div class="button-box">
+            <div class="button">开始阅读</div>
+            <div class="button button-a">购买阅读码</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="img"> <img src="./img/img1.jpg" alt=""> </div>
+          <h3>直击桃心的团队</h3>
+          <div class="more">
+            <div class="num">销量：3718</div>
+            <div class="price"><del>￥12.00</del><span>￥6.00</span></div>
+          </div>
+          <div class="button-box">
+            <div class="button">开始阅读</div>
+            <div class="button button-a">购买阅读码</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/rem.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+  <script>
+    var rWidth = document.documentElement.style.fontSize.replace('px', '')
+    console.log(rWidth);
+    var theSpaceBetween = parseInt(rWidth * .8);
+    var theWidth = parseInt(rWidth * 7.5)
+    var theHeight = parseInt(rWidth * 8)
+    var mySwiper = new Swiper('.swiper-container', {
+      loop: true,
+      //    width: theWidth,
+      //    height: 300, //你的slide高度
+      initialSlide: 1,
+      //    autoplay: true, //可选选项，自动滑动
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      spaceBetween: theSpaceBetween,
+      //    slidesOffsetBefore: 20,
+      //    slidesOffsetAfter: 20,
+    })
+  </script>
+</body>
+
+</html>
